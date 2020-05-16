@@ -2,6 +2,9 @@
     grid-area: n;
     background-color: bisque;
   }
-  .item{
+  .item {
       color: white;
+  }
+  .item.active {
+      color:rgb(255, 0, 43);
   }
