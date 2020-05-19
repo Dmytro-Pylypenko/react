@@ -1,5 +1,21 @@
-.item {
-    color: brown;
-    font-size: larger;
-   text-align: center;
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    
 }
+.dialogsItems {
+    padding: 20px;
+    text-decoration: none;
+    
+}
+
+.dialogsItems .active{
+    color: salmon;
+    text-decoration: none;
+}
+.messages {
+    padding: 10px;
+}
+
+/* .messages .message {
+} */

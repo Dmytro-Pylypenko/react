@@ -14,6 +14,8 @@
 
 .app-wrapper-content{
     grid-area: c;
-    background-color: chartreuse;
+   background-color: sienna;
+   height: 650px;
+   width: 1000px;
   
 }
