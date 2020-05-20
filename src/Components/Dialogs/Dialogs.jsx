@@ -9,27 +9,32 @@ const DialogItem = (props) => {
         <NavLink to={path}>{props.name}</NavLink>
     </div>
 }
-
 const Message = (props) => {
     return <div className={s.dialog}>{props.message}</div>
 }
-
+let dialogsData = [
+    { id: 0, name: 'Dimka' },
+    { id: 1, name: 'Bialka' },
+    { id: 2, name: 'Victor' },
+    { id: 3, name: 'Alex' },
+    { id: 4, name: 'Valera' },
+    { id: 5, name: 'Anton' },
+]
+let messagesData = [
+    { id: 0, message: 'Hi' },
+    { id: 1, message: 'Welcome to my network' },
+    { id: 2, message: 'Yo' },
+]
+let dialogsElements = dialogsData.map(dialog => <DialogItem name={dialog.name} id={dialog.id} />);
+let messagesElements = messagesData.map(message => <Message message={message.message} id={message.id} />);
 const Dialogs = (props) => {
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>
-                <DialogItem name='Dimka' id='1' />
-                <DialogItem name='Bialka' id='2' />
-                <DialogItem name='Viktor' id='3' />
-                <DialogItem name='Alex' id='4' />
-                <DialogItem name='Valera' id='5' />
-                <DialogItem name='Anton' id='6' />
-
+                {dialogsElements}
             </div>
             <div className={s.messages}>
-                <Message message="hi" />
-                <Message message="Welcome to my network" />
-                <Message message="Yo" />
+                {messagesElements}
             </div>
         </div>
     )
