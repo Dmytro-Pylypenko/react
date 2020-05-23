@@ -18,8 +18,9 @@ const App = (props) => {
         <Header />
         <Navbar />
         <div class='app-wrapper-content'>
-          <Route path='/profile' component={Profile} />
-          <Route path='/dialogs' component={Dialogs} />
+          <Route path='/profile' render={() => <Profile state={props.state.profilePage} />} />
+          <Route path='/dialogs' render={() => <Dialogs state={props.state.dialogsPage} />} />
+
           <Route path='/news' component={News} />
           <Route path='/music' component={Music} />
           <Route path='/settings' component={Settings} />
@@ -28,5 +29,4 @@ const App = (props) => {
     </BrowserRouter>
   );
 }
-
 export default App;
