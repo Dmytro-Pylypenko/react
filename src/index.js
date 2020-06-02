@@ -3,16 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
-let posts= [
-  { id: 0, message: 'Hi, how are you', likesCount: 12 },
-  { id: 1, message: 'It\'s my first post', likesCount: 24 },
-  { id: 2, message: 'Yo', likesCount: 22 },
-]
-
+import state from './Redux/state';
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App appState={state} />
   </React.StrictMode>,
   document.getElementById('root')
 );
