@@ -4,13 +4,21 @@
     
 }
 .dialogsItems {
+    
     padding: 20px;
-    text-decoration: none;
+    
     
 }
-
-.dialogsItems .active{
-    color: salmon;
+.dialogs a{
     text-decoration: none;
 }
+.dialogs a.active{
+    color: aqua;
+}
+   
+.messages{
+    padding: 10px;
+    color: aliceblue;
+}
+
 
