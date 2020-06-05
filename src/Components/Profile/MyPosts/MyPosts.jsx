@@ -7,18 +7,23 @@ const MyPosts = (props) => {
     let newPostElement = React.createRef();
 
     let addPost = () => {
+        props.addPost();
         
-        let text = newPostElement.current.value;
-        props.addPost (text);
-        newPostElement.current.value='';
+       
     }
-    
+
+    let onPostChage = () => {
+        let text = newPostElement.current.value;
+        props.updateNewPostText(text);
+    }
+
     return (
         <div className={s.posts}>
             <h3>My posts</h3>
             <div>
                 <div>
-                    <textarea ref={newPostElement}></textarea>
+                    <textarea onChange={onPostChage} ref={newPostElement}
+                        value={props.newPostText} />
                 </div>
                 <div>
                     <button onClick={addPost}>Add post </button>
