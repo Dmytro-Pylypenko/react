@@ -1,24 +1,22 @@
 .dialogs {
     display: grid;
     grid-template-columns: 2fr 10fr;
-    
 }
 .dialogsItems {
-    
     padding: 20px;
-    
-    
 }
-.dialogs a{
+
+.dialogs a {
     text-decoration: none;
 }
-.dialogs a.active{
+.dialogs a.active {
     color: aqua;
 }
-   
-.messages{
+
+.messages {
     padding: 10px;
     color: aliceblue;
 }
-
-
+.add {
+    text-align: center;
+}
