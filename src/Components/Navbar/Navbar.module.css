@@ -2,15 +2,28 @@
     grid-area: n;
     background-color: bisque;
     padding: 30px;
-  }
-  .item a {
-      color: white;
-      text-decoration: none;  
-  }
-  .item a.active {
-      color:red;
-  }
-  .item{
-      margin: 10px;
-      color: aqua;
-  }
+}
+.item a {
+    color: white;
+    text-decoration: none;
+}
+.item a.active {
+    color: red;
+}
+.item {
+    margin-bottom: 2px;
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 2em;
+    outline: none;
+    border-width: 2px 0;
+    border-style: solid none;
+    border-color: #fdbe33 #000 #d77206;
+    border-radius: 6px;
+    background: linear-gradient(#f3ae0f, #e38916) #e38916;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.item:active {
+    background: linear-gradient(#f59500, #f5ae00) #f59500;
+}
