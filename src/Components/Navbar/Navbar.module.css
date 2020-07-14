@@ -4,6 +4,7 @@
     padding: 30px;
 }
 .item a {
+    padding: 0.5em 2em;
     color: white;
     text-decoration: none;
 }
@@ -11,10 +12,11 @@
     color: red;
 }
 .item {
+   
     margin-bottom: 2px;
     color: white;
     text-decoration: none;
-    padding: 0.5em 2em;
+    min-height: 35px;
     outline: none;
     border-width: 2px 0;
     border-style: solid none;
