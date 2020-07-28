@@ -23,20 +23,23 @@ let initialState = {
 
 const dialogsReduser = (state = initialState, action) => {
     switch (action.type) {
-        case SEND_MESSAGE:
-            let newMessage = {
-                id: 9,
-                message: state.newMessageText
-            };
-            state.messages.push(newMessage);
-            state.newMessageText = '';
-            return state;
         case UPDATE_NEW_MESSAGE_TEXT:
-            state.newMessageText = action.newText;
+            return  {
+                ...state,
+                newMessageText: action.newText
+            };
+        case SEND_MESSAGE:
+            let newMessage = state.newMessageText;
+            return {
+                ...state,
+                newMessageText: '',
+                messages: [...state.messages, { id: 7, message: newMessage }]
+            };
+        default:
             return state;
-        default: return state;
     }
 }
+
 export const sendMessageCreator = () => ({ type: SEND_MESSAGE })
 export const updateNewMessageCreator = (text) =>
     ({ type: UPDATE_NEW_MESSAGE_TEXT, newText: text })
