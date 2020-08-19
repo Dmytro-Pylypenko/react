@@ -3,7 +3,7 @@ import styles from './users.module.css';
 import * as Axios from 'axios';
 import userPhoto from '../../assets/img/ava.png';
 
-class UsersC extends React.Component {
+class Users extends React.Component {
 
 componentDidMount() {
     Axios.get("https://social-network.samuraijs.com/api/1.0/users")
@@ -42,4 +42,4 @@ render() {
 }
 }
 
-export default UsersC;
+export default Users;
